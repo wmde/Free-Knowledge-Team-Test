@@ -1,0 +1,27 @@
+{
+  "name": "gulp-wp-starter-theme",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-include": "^2.4.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "~4.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.1.0",
+    "postcss-prettify": "^0.3.4"
+  },
+  "dependencies": {
+    "css-mqpacker": "^7.0.0",
+    "foundation-sites": "^6.5.3",
+    "gulp-postcss": "^8.0.0",
+    "precss": "^4.0.0"
+  }
+}

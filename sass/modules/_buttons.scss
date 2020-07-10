@@ -1,0 +1,54 @@
+/* Button styles */
+
+.button {
+  color: white;
+  background-color: #e2007a;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0.6em;
+}
+.button:hover {
+  background-color: #0065a4;
+}
+.button {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  cursor: pointer;
+  @media only screen and  (min-width: $size-sm) {
+      font-size: 21px;
+  }
+}
+
+.button--large {
+  font-size: 28px;
+  line-height: 0.87;
+  @media only screen and (min-width: $size-md) {
+    font-size: 36px;
+  }
+}
+
+.button--pink {
+  color: white;
+  box-shadow: 0 6px 0 #900;
+  background-color: #e2007a;
+  margin-bottom: 6px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.button--pink:focus,
+.button--pink:hover {
+  color: white;
+  background-color: #e2007a;
+  box-shadow: 0 0 0 #0065a4;
+  transform: translateY(6px);
+}
+
+.button--white {
+ background:white;
+ color:#e2007a
+}
+.button--white:hover,
+.button--white:focus {
+ color:white;
+ background:#0065a4
+}

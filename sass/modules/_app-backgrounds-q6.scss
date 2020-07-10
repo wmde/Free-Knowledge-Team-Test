@@ -1,0 +1,45 @@
+/* App q6 */
+
+.q6 {
+  .graphic-1 {
+    background-image: url("images/app/game/screen6/Element 37.png");
+    width: 340px;
+    height: 160px;
+    top: -120px;
+    right: 250px;
+    @media only screen and (min-width: $size-lg) {
+      top: -80px;
+    }
+  }
+  .graphic-2 {
+    background-image: url("images/app/game/screen6/Element 38.png");
+    width: 350px;
+    height: 180px;
+    top: -80px;
+    right: 130px;
+    @media only screen and (min-width: $size-lg) {
+      top: -40px;
+    }
+  }
+  .graphic-3 {
+    background-image: url("images/app/game/screen6/Element 39.png");
+    width: 380px;
+    height: 500px;
+    top: 100px;
+    left: 0;
+  }
+  .graphic-4 {
+    background-image: url("images/app/game/screen6/Element 41.png");
+    width: 230px;
+    height: 310px;
+    bottom: -50px;
+    right: -80px;
+  }
+  .graphic-5 {
+    background-image: url("images/app/game/screen6/Element 40.png");
+    width: 150px;
+    height: 250px;
+    bottom: 30px;
+    right: -40px;
+  }
+}

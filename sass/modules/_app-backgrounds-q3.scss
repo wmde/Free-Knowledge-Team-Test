@@ -1,0 +1,63 @@
+/* App q3 */
+
+.q3 {
+  .graphic-1 {
+    background-image: url("images/app/game/screen4/Element 26.png");
+    width: 400px;
+    height: 180px;
+    left: -390px;
+    top: 130px;
+    @media only screen and (min-width: $size-lg) {
+      left: -300px;
+    }
+  }
+  .graphic-2 {
+    background-image: url("images/app/game/screen4/Element 27.png");
+    width: 350px;
+    height: 350px;
+    top: 180px;
+    left: -80px;
+  }
+  .graphic-3 {
+    background-image: url("images/app/game/screen4/Element 28.png");
+    width: 300px;
+    height: 300px;
+    top: -250px;
+    right: 210px;
+    @media only screen and (min-width: $size-lg) {
+      top: -210px;
+    }
+  }
+  .graphic-4 {
+    background-image: url("images/app/game/screen4/Element 29.png");
+    width: 230px;
+    height: 400px;
+    top: -70px;
+    right: -150px;
+    @media only screen and (min-width: $size-lg) {
+      right: -60px;
+    }
+  }
+  .graphic-5 {
+    background-image: url("images/app/game/screen4/Element 30.png");
+    width: 300px;
+    height: 375px;
+    bottom: -100px;
+    left: -100px;
+  }
+  .graphic-6 {
+    background-image: url("images/app/game/screen4/Element 31.png");
+    width: 250px;
+    height: 250px;
+    bottom: 120px;
+    right: -140px;
+  }
+  .graphic-7 {
+    background-image: url("images/app/game/screen4/Element 32.png");
+    width: 160px;
+    height: 180px;
+    bottom: 50px;
+    right: -50px;
+  }
+
+}

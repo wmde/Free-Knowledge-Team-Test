@@ -1,0 +1,194 @@
+/* App start screen */
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.screen--start {
+  height: unset;
+  min-height: unset;
+  padding: 0 !important;
+  @media only screen and (min-width: $size-md) {
+    padding: 0;
+  }
+  @media only screen and (min-width: $size-lg) {
+    padding: 0;
+  }
+  .screen__title{
+    display: block !important;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    font-size: 4.5rem;
+    @media only screen and (min-width: $size-md) {
+      font-size: 7rem;
+    }
+  }
+  .screen__subtitle {
+    padding-top: 0 !important;
+    font-size: 3.0rem;
+    text-align: center;
+    position: relative;
+    margin: 0 0 1rem;
+    z-index: 1;
+    @media only screen and (min-width: $size-md) {
+      font-size: 3.5rem;
+    }
+  }
+  .screen__title,
+  .screen__subtitle{
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    position: relative;
+    text-align: center;
+    font-size: 3.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    padding: 1rem 2rem;
+  }
+
+  .graphic {
+    position: absolute;
+  }
+
+  .screen__inner {
+    position: relative;
+    min-height: 50px;
+    &__content {
+      z-index: 2;
+      left: 0;
+      right: 0;
+      margin: 0 auto 250px;
+      padding: 12rem 1rem 0;
+      position: relative;
+      max-width: 350px;
+      @media only screen and (min-width: $size-md) {
+        max-width: 550px;
+      }
+      @media only screen and (min-width: $size-lg) {
+        max-width: 650px;
+      }
+      &:before {
+        content: ' ';
+        display: block;
+        background-image: url("images/app/game/start/Element 2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding-bottom: 100%;
+        @media only screen and (min-width: $size-sm) {
+          width: 400px;
+          height: 400px;
+          padding-bottom: 0;
+        }
+        @media only screen and (min-width: $size-lg) {
+          width: 550px;
+          height: 550px;
+          padding-bottom: 0;
+        }
+        transform-origin: center center;
+        -webkit-animation: spin 9s linear infinite;
+        -moz-animation: spin 9s linear infinite;
+        animation: spin 9s linear infinite;
+      }
+    }
+    .graphic-1 {
+      // logo
+      position: absolute;
+      background-image: url("images/app/game/start/Element 8.png");
+      width: 120px;
+      height: 90px;
+      top: 15px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1;
+      @media only screen and (min-width: $size-md) {
+        margin: 0;
+        left: unset;
+        right: 50px;
+        top: 50px;
+      }
+    }
+    .graphic-2 {
+      background-image: url("images/app/game/start/Element 9.png");
+      bottom: 0;
+      left: 10px;
+    }
+    .graphic-3 {
+      // CHAR
+      background-image: url("images/app/game/start/Element 7.png");
+      bottom: 0;
+      right: 10px;
+    }
+    .graphic-2,
+    .graphic-3 {
+      z-index: 2;
+      width: 150px;
+      height: 225px;
+      @media only screen and (min-width: $size-md) {
+        width: 250px;
+        height: 325px;
+      }
+      @media only screen and (min-width: $size-lg) {
+        width: 300px;
+        height: 430px;
+      }
+    }
+    .graphic-4 {}
+  }
+  .graphic-5,
+  .graphic-6,
+  .graphic-7 {
+    display: none;
+    @media only screen and (min-width: $size-lg) {
+      display: block;
+    }
+  }
+  .graphic-5 {
+    background-image: url("images/app/game/start/Element 3.png");
+    width: 400px;
+    height: 500px;
+    bottom: 140px;
+    left: -90px;
+  }
+  .graphic-6 {
+    background-image: url("images/app/game/start/Element 5.png");
+    bottom: 280px;
+    right: -20px;
+    width: 220px;
+    height: 220px;
+  }
+  .graphic-7 {
+    background-image: url("images/app/game/start/Element 4.png");
+    right: -240px;
+    bottom: 40px;
+    width: 546px;
+    height: 336px;
+    z-index: -1;
+  }
+}

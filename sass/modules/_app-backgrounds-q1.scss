@@ -1,0 +1,57 @@
+/* App q1 */
+
+
+.q1 {
+  .graphic-1 {
+    background-image: url("images/app/game/screen1/Element 14.png");
+    width: 400px;
+    height: 300px;
+    top: 180px;
+    left: -150px;
+    @media only screen and (min-width: $size-lg) {
+      top: 155px;
+    }
+
+  }
+  .graphic-2 {
+    background-image: url("images/app/game/screen1/Element 13.png");
+    width: 400px;
+    height: 300px;
+    top: -250px;
+    left: 0;
+    @media only screen and (min-width: $size-lg) {
+        top: 50px;
+    }
+  }
+  .graphic-3 {
+    background-image: url("images/app/game/screen1/Element 15.png");
+    width: 280px;
+    height: 400px;
+    bottom: -100px;
+    right: 60px;
+  }
+  .graphic-4 {
+    background-image: url("images/app/game/screen1/Element 16.png");
+
+    top: 95px;
+    width: 160px;
+    height: 460px;
+    right: 0px;
+
+    @media only screen and (min-width: $size-lg) {
+        top: unset;
+        width: 160px;
+        height: 460px;
+        bottom: 200px;
+        right: 60px;
+    }
+  }
+  .graphic-5,
+  .graphic-6,
+  .graphic-7,
+  .graphic-8 {
+    display: none;
+  }
+}
+
+// @import "modules/buttons";

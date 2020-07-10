@@ -1,0 +1,91 @@
+$characters-width: (((120rem / 6) * 5) - (3.6/2)); // 1.8 = $grid-column-gutter
+
+/* Home character alignment */
+
+.characters{
+  width: 100%;
+  @include grid-row(12,null, $characters-width);
+  .characters__heading {
+    @include grid-column(12);
+  }
+  .character{
+    @include grid-column(12);
+    @media only screen and (min-width: $size-sm){
+      @include grid-column(6);
+    }
+    @media only screen and (min-width: $size-md) {
+      @include grid-column(4);
+    }
+  }
+
+}
+
+/* Home character styles */
+
+.characters {
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 25vw;
+    height: 25vw;
+    display: block;
+    background-image: url("images/home/wikim-elemente-01.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &__heading {
+    text-align: left;
+    padding: 1rem 0;
+    @media only screen and (min-width: $size-md) {
+      padding: 2rem 0;
+    }
+    &__title{
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 80px;
+    }
+    &__text{
+      font-size: 21px;
+    }
+  }
+
+  .character:focus-within,
+  .character:hover {
+    filter:none;
+    cursor: pointer;
+  }
+
+  .character__card{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    filter:grayscale(1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    background-size: cover;
+    display: block;
+    padding-bottom: 133%;
+    margin-bottom: 26px;
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .character__heading {
+    top: 26px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+}

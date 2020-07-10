@@ -1,0 +1,30 @@
+.footer--app{
+  width: 100%;
+  @include grid-row(12, null, expand);
+
+  &__nav {
+    @include grid-column(12);
+  }
+  &__menu {
+    margin: 0;
+    padding: 2rem 0;
+    list-style: none;
+  }
+  &__menu-item{
+    display: inline-block;
+    padding: 0 2rem 0 0;
+    margin: 0;
+  }
+  &__menu-link{
+    font-size: 21px;
+    line-height: 1.5;
+    color: black;
+    border-bottom: 1px solid #e2007a;
+    text-decoration: none;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    &:hover {
+      border-color: #0065a4;
+    }
+  }
+}

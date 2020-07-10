@@ -1,0 +1,26 @@
+// http://bunomonteiro.github.io/grid.css/
+
+/* GRID */
+$width: 96%;
+$gutter: 4%;
+// $breakpoint-small: 768px;
+// $breakpoint-med: 1024px;
+// $breakpoint-large: 1400px;
+
+$size-xs: 320px !default;
+$size-xs-min: $size-xs !default;
+$size-sm: 480px !default;
+$size-sm-min: $size-sm !default;
+$size-md: 800px !default;
+$size-md-min: $size-md !default;
+$size-lg: 1140px !default;
+$size-lg-min: $size-lg !default;
+$size-xl: 1400px !default;
+$size-xl-min: $size-xl !default;
+$size-xs-max: ($size-sm-min - 1) !default;
+$size-sm-max: ($size-md-min - 1) !default;
+$size-md-max: ($size-lg-min - 1) !default;
+$size-lg-max: ($size-xl-min - 1) !default;
+$total-cols: 12;
+$col-margin: 3%;
+$sizes: xs, sm, md, lg, xl;

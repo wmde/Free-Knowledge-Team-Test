@@ -1,0 +1,41 @@
+.screen--end {
+  .graphic-1 {
+    background-image: url("images/app/game/end/Element 50.png");
+    width: 140px;
+    height: 300px;
+    bottom: 0;
+    left: -90px;
+    @media only screen and (min-width: $size-lg) {
+      height: 480px;
+      width: 200px;
+      left: -70px;
+    }
+
+  }
+  .graphic-2 {
+    background-image: url("images/app/game/end/Element 51.png");
+    width: 270px;
+    height: 160px;
+    top: -110px;
+    right: 110px;
+    @media only screen and (min-width: $size-lg) {
+      width: 400px;
+      height: 300px;
+      top: -110px;
+      right: 200px;
+    }
+  }
+  .graphic-3 {
+    background-image: url("images/app/game/end/Element 52.png");
+    width: 350px;
+    height: 300px;
+    top: -160px;
+    right: -40px;
+    @media only screen and (min-width: $size-lg) {
+      width: 450px;
+      height: 400px;
+      top: -120px;
+      right: -40px;
+    }
+  }
+}

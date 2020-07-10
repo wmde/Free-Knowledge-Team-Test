@@ -1,0 +1,182 @@
+/* Footer alignment */
+
+.footer{
+  width: 100%;
+  @include grid-row(12);
+  &__contact {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(5);
+      @include grid-col-pos(6);
+    }
+    @media only screen and (min-width: $size-lg) {
+      @include grid-col-size(4);
+      @include grid-col-pos(7);
+    }
+  }
+  &__info {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(3);
+      @include grid-col-pos(-5);
+    }
+    @include grid-col-end();
+    @media only screen and (min-width: $size-lg) {
+      @include grid-col-size(3);
+      @include grid-col-pos(-4);
+    }
+  }
+}
+
+/* Footer styles */
+
+.footer {
+  padding-top: 3rem;
+  position: relative;
+  overflow: hidden;
+  @media only screen and (min-width: $size-lg) {
+    overflow: visible;
+  }
+
+  &:before {
+    @media only screen and (min-width: $size-md) {
+      content: " ";
+      position: absolute;
+      display: block;
+      left: 25px;
+      bottom: 0;
+      width: 110%;
+      height: 280px;
+      background-image: url("images/home/wikim-elemente-07.png");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 80%;
+      z-index: -1;
+      .page-id-6 & { // home
+        background-image: url("images/home/wikim-elemente-02.png");
+      }
+      .single & {
+        background-size: 90%;
+      }
+    }
+    @media only screen and (min-width: $size-lg) {
+      left: 100px;
+    }
+  }
+
+  &__contact {
+    background-image: url("images/home/wikim-elemente-07.png");
+    background-size: auto 450px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    padding-bottom: 10rem;
+    padding-top: 20rem;
+    @media only screen and (min-width: $size-md) {
+      background: none;
+      padding-bottom: 0;
+      padding-top: 0;
+      margin-top: 22rem;
+      text-align: left;
+    }
+
+    .page-id-6 & { // home
+      background-image: url("images/home/wikim-elemente-02.png");
+      @media only screen and (min-width: $size-lg) {
+        background-image: none;
+      }
+    }
+
+    &__title{
+      text-align: center;
+      color: white;
+      padding-bottom: 2rem;
+      @media only screen and (min-width: $size-md) {
+        font-size: 21px;
+        line-height: 1.5;
+        text-align: left;
+      }
+    }
+  }
+
+
+  &__logo {
+    background-image: url("images/wikim-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-bottom: 6rem;
+    width: 150px;
+    height: 150px;
+    display: block;
+    font-size: 0;
+    margin-left: 1rem;
+    @media only screen and (min-width: $size-lg) {
+      margin-left: 0;
+    }
+
+  }
+
+  &__credits {
+    font-size: 12px;
+    color: #4a4a4a;
+    transform: translateY(-18px);
+    text-align: left;
+    margin-left: 1rem;
+    @media only screen and (min-width: $size-lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__nav {
+    margin-left: 1rem;
+  }
+
+  &__menu {
+    padding-left: 0;
+    padding-right: 2em;
+    padding-top: 0;
+    list-style: none;
+  }
+  &__menu-item{
+    padding-bottom: 0.7em;
+    padding-left: 0;
+  }
+
+  &__menu-link {
+    color: #4a4a4a;
+    border-color: #e2007a;
+    border-bottom: 1.5px solid #e2007a;
+    font-size: 21px;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 0.01em 3px 0.01em 0.01em;
+    white-space: nowrap;
+    text-align: left;
+    @media only screen and (min-width: $size-lg) {
+      border-bottom-width: 1px;
+      padding: 0 3px 0 0;
+      color: black;
+    }
+
+    &:hover {
+      border-color: #0065a4;
+    }
+
+    &--back{
+      color: #4a4a4a;
+      border-bottom: none;
+      font-weight: bold;
+
+      &:focus,
+      &:hover {
+        color: #0065a4;
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 1em;
+  }
+
+}

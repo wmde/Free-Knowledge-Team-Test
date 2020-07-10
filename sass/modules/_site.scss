@@ -1,0 +1,22 @@
+/* Global styles */
+
+html,
+body{
+  // max-width: 100%;
+  // overflow-x: hidden;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1rem;
+  overflow-x: hidden;
+}
+.cf {
+  @include clearfix;
+}
+.row {
+  @include row-width;
+}
+.highlight,
+a .highlight{
+  color: #9b9b9b;
+}

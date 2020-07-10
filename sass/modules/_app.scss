@@ -1,0 +1,171 @@
+/* App styles */
+
+.app {
+  position: relative;
+}
+
+.app__back-link,
+.app__restart-link{
+  position: absolute;
+  top: 0rem;
+  color: #e2007a;
+  text-decoration: none;
+  z-index: 10;
+  &:focus, &:hover{
+    color: #900;
+  }
+}
+.app__back-link {
+  font-size: 72px;
+  line-height: 36px;
+  right: 0px;
+  @media only screen and (min-width: $size-md) {
+    right: 18px;
+    font-size: 84px;
+    line-height: 56px;
+  }
+}
+.app__restart-link {
+  display: none;
+  .app.started &{
+    display: block;
+  }
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  left: 10px;
+  @media only screen and (min-width: $size-md) {
+    left: 18px;
+    font-size: 34px;
+    line-height: 56px;
+  }
+}
+
+.gform_wrapper {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.app.started {
+  .gform_wrapper {
+    opacity: 1;
+  }
+}
+
+.screen,
+.gform_wrapper form li.screen{
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 10px 10px 10px !important;
+  @media only screen and (min-width: $size-md) {
+    padding: 35px !important;
+  }
+  @media only screen and (min-width: $size-lg) {
+    padding: 75px !important;
+  }
+  min-height: 480px;
+  @media only screen and (min-height: 481px) {
+    min-height: calc(100vh - 71px);
+  }
+  @media only screen and (min-height: 600px) {
+    min-height: 560px;
+    min-height: calc(100vh - 71px);
+  }
+  @media only screen and (min-width: 700px) {
+    min-height: 680px;
+    min-height: calc(100vh - 71px);
+  }
+
+  .graphic {
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+}
+
+
+.screen{
+  display: none;
+  box-sizing: border-box !important;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 1 !important;
+  background: #fff;
+  top: 0;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.375s linear;
+
+  &.active {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  &__title{
+    margin: 12rem auto 2rem;
+    padding: 0;
+    text-align: center;
+    line-height: 1.15em;
+    font-size: 2.75rem;
+    @media only screen and (min-width: $size-md) {
+      font-size: 4rem;
+    }
+    @media only screen and (min-width: $size-lg) {
+      font-size: 5rem;
+    }
+  }
+
+  &__next{
+    color: #e2007a;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    @media only screen and (min-width: $size-md) {
+      font-size: 34px;
+      line-height: 56px;
+    }
+  }
+
+  &__inner{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    @include grid-row(12);
+    margin-bottom: 13rem;
+    .start.screen &{
+      margin-bottom: 0;
+    }
+    p {
+      @media only screen and (min-width: $size-md) {
+        @include grid-col-size(8);
+        @include grid-col-pos(2);
+      }
+    }
+  }
+}
+
+.gform_wrapper form li.screen{
+  display: block;
+  text-align: left;
+}
+/* Page loading & Animations backgrounds */
+.intro-1, .intro-2, .intro-3,
+.gform_wrapper form li.screen {
+  .graphic {
+    transform: scale(0);
+    transition: transform 2s linear;
+  }
+  &.active {
+    .graphic {
+      transform: scale(1);
+    }
+  }
+}

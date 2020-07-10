@@ -1,0 +1,84 @@
+/* Home participate alignment */
+
+.participate {
+  width: 100%;
+  @include grid-row(12);
+  &__details {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(6);
+      @include grid-col-pos(6);
+    }
+  }
+  &__screenshot {
+    @include grid-column(12);
+    @include grid-col-end();
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(6);
+      @include grid-col-pos(-6);
+    }
+  }
+}
+
+/* Home participate styles */
+
+.participate {
+  padding-top: 7rem;
+  margin-bottom: 1rem;
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 15vw;
+    height: 15vw;
+    margin-top: -9rem;
+    display: block;
+    background-image: url("images/home/wikim-elemente-05.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    z-index: -1;
+  }
+}
+.participate__heading {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+.participate__text {
+  font-size: 21px;
+  line-height: 1.5;
+  color: #4a4a4a;
+  padding-top: 0;
+  margin-top: 0;
+}
+.participate__screenshot {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  margin-top: 4em;
+  min-height: 350px;
+  @media only screen and (min-width: $size-lg) {
+    margin-top: 0;
+    min-height: unset;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.participate__screenshot__image {
+  width: 100%;
+  display: block;
+  max-width: 800px;
+  max-width: 80rem;
+  margin: auto;
+  cursor: pointer;
+}
+.participate__button {
+  margin-top: 1rem;
+  text-align: left;
+  @media only screen and (min-width: $size-md) {
+    text-align: center;
+  }
+}

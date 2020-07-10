@@ -1,0 +1,83 @@
+/* Home test alignment */
+
+.test {
+  width: 100%;
+  @include grid-row(12);
+  &__cta {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(6);
+      @include grid-col-pos(6);
+    }
+    @media only screen and (min-width: $size-lg) {
+      @include grid-col-size(6);
+      @include grid-col-pos(5);
+    }
+  }
+  &__result {
+    @include grid-column(12);
+    @include grid-col-end();
+    @media only screen and (min-width: $size-md) {
+      @include grid-col-size(6);
+      @include grid-col-pos(-6);
+    }
+    @media only screen and (min-width: $size-lg) {
+      @include grid-col-size(5);
+      @include grid-col-pos(-6);
+    }
+  }
+}
+
+.gfield_required{
+  display: none;
+}
+
+/* Home test styles */
+
+.test__cta,
+.test__result {
+  &__title {
+    font-size: 28px;
+    @media only screen and (min-width: $size-md) {
+      font-size: 36px;
+    }
+  }
+}
+.test__cta {
+  color: white;
+  background: #0065a4;
+  font-size: 24px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  .highlight{
+    color: #009ee0;
+  }
+  a{ color: #ffffff;
+  &:focus, &:hover {
+    color: #009ee0;
+    
+  }
+  }
+
+  &__text,
+  &__title {
+    margin: 2rem;
+    @media only screen and (min-width: $size-lg) {
+      margin: 3.2rem;
+    }
+  }
+}
+.test__result {
+  padding-top: 3rem;
+  @media only screen and (min-width: $size-md) {
+    padding-top: 8rem;
+  }
+}
+.test__arrow {
+  margin: 2rem auto 0;
+  width: 65px;
+  display: block;
+  @media only screen and (min-width: $size-md) {
+    margin: 5rem auto 0;
+  }
+}

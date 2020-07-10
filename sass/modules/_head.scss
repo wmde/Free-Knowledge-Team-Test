@@ -1,0 +1,195 @@
+$stage-height: 200px;
+
+/* Home header alignment */
+
+.home-header {
+  width: 100%;
+  @include grid-row(12);
+  &__wrapper {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-lg) {
+      @include grid-col-size(9);
+    }
+  }
+  &__nav {
+    @include grid-column(12);
+    @media only screen and (min-width: $size-lg) {
+      @include grid-column(2);
+      @include grid-col-end();
+    }
+  }
+  &__stage {
+    @include grid-col-size(6);
+    @include grid-col-pos(5);
+    @include grid-col-end();
+  }
+}
+
+/* Home header styles */
+
+.home-header {
+  position: relative;
+  padding-bottom: $stage-height - 100;
+  @media only screen and (min-width: $size-sm) {
+    padding-bottom: $stage-height - 150;
+  }
+  @media only screen and (min-width: $size-md) {
+    padding-bottom: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    background-image: url("images/home/wikim-grafik-titel.png");
+    background-size: auto 100%; //cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    @media only screen and (min-width: $size-md) {
+      background-size: 150%;
+      background-position: bottom;
+      overflow-x: visible;
+    }
+    @media only screen and (min-width: $size-lg) {
+      background-size: contain;
+      background-position: top;
+      padding-top: 9.5rem;
+      padding-bottom: 9.5rem;
+      padding-left: 7.5rem; // ~
+    }
+  }
+  &__intro {
+    margin-top: 0;
+    font-size: 24px;
+    color: black;
+    padding-top: 50px;
+    @media only screen and (min-width: $size-sm) {
+      font-size: 32px;
+    }
+    @media only screen and (min-width: $size-lg) {
+      padding-top: 0px;
+    }
+  }
+  &__button {
+    margin: 1em 0 2em;
+  }
+  &__heading {
+    margin-top: 25px;
+    max-width: 720px;
+    font-size: 36px;
+    @media only screen and (min-width: $size-sm) {
+      font-size: 50px;
+    }
+  }
+  &__nav{
+    @media only screen and (min-width: $size-lg) {
+      text-align: right;
+      margin-top: 9.5rem;
+    }
+  }
+
+  &__languages {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    width: 100px;
+    text-align: left;
+    z-index: 1;
+    line-height: 1.5;
+    @media only screen and (min-width: $size-sm) {
+      left: 1.5rem;
+    }
+    @media only screen and (min-width: $size-lg) {
+      position: relative;
+      text-align: right;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    .language-widget{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+        display: inline-block;
+        position: relative;
+        a{
+          display: block;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #000;
+          border-bottom: 1px solid #e2007a;
+          &:hover{
+            font-weight: bold;
+          }
+
+
+        }
+
+        &:first-child{
+          margin-right: 14px;
+
+          &:after{
+            color: #000000;
+            content: '\2022';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -13px;
+            font-size: 1em;
+            // font-weight: bold;
+            vertical-align: middle;
+          }
+        }
+
+        &.active{
+          a{
+            font-weight: bold;
+            border-bottom: 1px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__logo-link{
+      display: block;
+  }
+
+  &__logo-img{
+    display: inline-block;
+    width: 100%;
+    max-width: 130px;
+  }
+
+  &__stage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    z-index: 0;
+  }
+  &__image {
+    margin-right: 1rem;
+    // margin-top: 60px;
+    max-height: $stage-height;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+    @media only screen and (min-width: $size-sm) {
+      height: $stage-height + 25;
+    }
+    @media only screen and (min-width: $size-md) {
+      margin-right: 2rem;
+    }
+    @media only screen and (min-width: $size-lg) {
+      height: $stage-height + 100;
+      max-height: $stage-height + 100;
+    }
+  }
+
+}
